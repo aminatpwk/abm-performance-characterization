@@ -39,7 +39,7 @@ This work presents the first rigorous, methodical evaluation of these bottleneck
 
 On Intel Sapphire Rapids, the L2 cache serves as the LLC. Together, these metrics place the workload in the **memory-bound region** of the DAMOV classification tree, motivating a more rigorous investigation into data movement as the primary scalability bottleneck in agent-based simulations.
 
-![alt text](image.png)
+![DAMOV workfload classification decision tree](poster/figures/DAMOV_workload_decision_tree.png)
 
 Memory capacity is also a hard scalability wall: the 200M agent simulation consumed ~58 GB at peak (~290 bytes/agent), and simulations at 225M agents and beyond were terminated by the Linux OOM killer across all VM instances.
 
