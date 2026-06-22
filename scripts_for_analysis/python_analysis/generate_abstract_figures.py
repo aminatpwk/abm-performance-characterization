@@ -214,11 +214,11 @@ def plot_fig1(data: dict, out_dir: Path, dpi: int = 300):
                 zorder=5, alpha=0.7)
 
         # Fit and plot linear trend line
-        if len(valid_x) >= 2:
-            coeff = np.polyfit(valid_x, valid_means, 1)
-            fit_y = np.polyval(coeff, x)
-            ax.plot(x, fit_y, linestyle="--", color="#666666", linewidth=1.5,
-                    zorder=3, alpha=0.6, label=f"trend (slope={coeff[0]:.3g})")
+        # if len(valid_x) >= 2:
+        #     coeff = np.polyfit(valid_x, valid_means, 1)
+        #     fit_y = np.polyval(coeff, x)
+        #     ax.plot(x, fit_y, linestyle="--", color="#666666", linewidth=1.5,
+        #             zorder=3, alpha=0.6, label=f"trend (slope={coeff[0]:.3g})")
 
         # Tighten y-axis around actual data range
         all_vals = [v for s in scales for v in data[s].get(metric, [])]
